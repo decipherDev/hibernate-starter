@@ -18,6 +18,8 @@ jobs:
     
   sonarCloudTrigger:
     runs-on: ubuntu-latest
+    env:
+      login: ${{ sonar_login }} 
     steps:
       - name: Analyze with SonarCloud
-        run: mvn sonar:sonar  -Dsonar.projectKey=decipherDev_hibernate-starter -Dsonar.organization=decipherDev -Dsonar.host.url=https://sonarcloud.io -Dsonar.login= ${{ sonar_login }}
+        run: mvn sonar:sonar  -Dsonar.projectKey=decipherDev_hibernate-starter -Dsonar.organization=decipherDev -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=login
