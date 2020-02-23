@@ -21,4 +21,4 @@ jobs:
     
     steps:
       - name: Analyze with SonarCloud
-        run: mvn sonar:sonar  -Dsonar.projectKey=decipherDev_hibernate-starter -Dsonar.organization=decipherDev -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=login
+        run: mvn sonar:sonar  -Dsonar.projectKey=decipherDev_hibernate-starter -Dsonar.organization=decipherDev -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=fc5eb02dba58ef8e8c16fda879444e2e534eed52
