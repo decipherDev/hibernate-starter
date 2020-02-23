@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 1.12
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn sonar:sonar  -Dsonar.projectKey=decipherDev_hibernate-starter -Dsonar.organization=decipherDev -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=fc5eb02dba58ef8e8c16fda879444e2e534eed52 --file pom.xml
     
   sonarCloudTrigger:
     runs-on: ubuntu-latest
